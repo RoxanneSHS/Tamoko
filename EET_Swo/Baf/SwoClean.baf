@@ -1,0 +1,8 @@
+IF
+OR(2)
+Global("SWO_Delay","Global",3)
+Global("SWO_Delay","Global",2)
+THEN
+RESPONSE #100
+DestroySelf()
+END

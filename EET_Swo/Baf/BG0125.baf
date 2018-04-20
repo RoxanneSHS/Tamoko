@@ -1,0 +1,46 @@
+IF
+Global("SWO_Delay","Global",0)
+THEN
+RESPONSE #100
+SetGlobal("SWO_Delay","Global",1)
+SetGlobal("EndOfBG1","GLOBAL",-1)
+Continue()
+END
+
+IF
+Global("SWO_Delay","Global",1)
+Dead("Sarevok")
+PartyHasItem("SW2H16")
+THEN
+RESPONSE #100
+SetGlobal("SWO_Delay","Global",2)
+TriggerActivation("Door0123",TRUE)
+ActionOverride(Player1,DisplayStringHead(Myself,@1001)) 
+AddJournalEntry(@1002,QUEST)
+END
+
+IF
+Global("SWO_Delay","Global",3)
+!InParty("CVSandr")
+!InParty("CVJenlig")
+THEN
+RESPONSE #100
+SetGlobal("EndOfBG1","GLOBAL",0)
+EraseJournalEntry(@1002)
+EraseJournalEntry(@1003)
+EraseJournalEntry(@1004)
+END
+
+IF
+Global("SWO_Delay","Global",3)
+OR(2)
+InParty("CVSandr")
+InParty("CVJenlig")
+THEN
+RESPONSE #100
+SetGlobal("SWO_Delay","Global",4)
+EraseJournalEntry(@1002)
+EraseJournalEntry(@1003)
+EraseJournalEntry(@1004)
+END
+

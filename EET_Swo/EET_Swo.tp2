@@ -1,0 +1,55 @@
+BACKUP ~EET_Swo/backup~
+AUTHOR ~Roxanne - Send PM to Roxanne at SHSForums.net~
+
+VERSION ~v0.2~
+AUTO_TRA ~EET_Swo/Tra/%s~
+
+LANGUAGE ~English~ ~english~ ~EET_Swo/Tra/Setup-Swo.tra~
+
+BEGIN ~The Sword of Chaos~
+REQUIRE_PREDICATE GAME_IS ~ eet~ @1
+
+ADD_JOURNAL @1002 @1003 @1004 USING ~EET_Swo/Tra/Setup-Swo.tra~
+
+COPY_EXISTING ~BDKorme1.CRE~ ~override/Swome1.cre~
+WRITE_ASCII 0x280 ~Swome1~ #8
+COPY_EXISTING ~BDKordem.CRE~ ~override/Swome2.cre~
+WRITE_ASCII 0x280 ~Swome2~ #8
+COPY_EXISTING ~BDKorme2.CRE~ ~override/Swome3.cre~
+WRITE_ASCII 0x280 ~Swome3~ #8
+COPY_EXISTING ~BDKorme7.CRE~ ~override/Swome4.cre~
+WRITE_ASCII 0x280 ~Swome4~ #8
+
+COMPILE ~EET_Swo/D/TamokoJ.d~
+COMPILE ~EET_Swo/D/EETSwo.d~
+COMPILE ~EET_Swo/baf/SwoTamok.baf~
+COMPILE ~EET_Swo/baf/SwoAmbS.baf~
+COMPILE ~EET_Swo/baf/SwoClean.baf~
+
+EXTEND_TOP ~bg0125.bcs~ ~EET_Swo/baf/bg0125.baf~
+EXTEND_TOP ~Sarevok_.bcs~ ~EET_Swo/baf/sareswo.baf~
+EXTEND_TOP ~bg0108.bcs~ ~EET_Swo/baf/BG0108.baf~
+EXTEND_TOP ~bg0200.bcs~ ~EET_Swo/baf/BG0200.baf~
+EXTEND_TOP ~bg0123.bcs~ ~EET_Swo/baf/BG0123saf.baf~
+EXTEND_TOP ~Safana.bcs~ ~EET_Swo/baf/SafanaUC.baf~
+
+COPY ~EET_Swo/Misc/Tamokos.bmp~ ~override~
+COPY ~EET_Swo/Misc/Tamokom.bmp~ ~override~
+
+COPY_EXISTING ~Tamoko.cre~ ~override~
+WRITE_ASCII 0x34 ~Tamokos~ #8
+WRITE_ASCII 0x3c ~Tamokom~ #8
+SAY BIO @1005
+
+APPEND ~pdialog.2da~
+~Tamoko TamokoP TamokoJ TamokoD *** *** *** ***~
+UNLESS ~Tamoko~
+
+APPEND ~interdia.2da~
+~Tamoko TamokoJ *** ~
+UNLESS ~Tamoko~ 
+
+EXTEND_BOTTOM ~winski.bcs~ ~EET_Swo/baf/SwoClean.baf~
+
+COPY_EXISTING ~Delthy.CRE~ ~override~
+WRITE_ASCII 0x258 ~SwoClean~ #8

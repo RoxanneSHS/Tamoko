@@ -1,0 +1,16 @@
+IF
+Global("Safloot","bg0123",1)
+AreaCheck("bg0123")
+See([PC])
+THEN
+RESPONSE #100
+StartDialogNoSet([PC])
+END
+
+IF
+Global("Safloot","bg0123",2)
+THEN
+RESPONSE #100
+SetGlobal("Safloot","bg0123",3)
+EscapeAreaObject("Door0125")
+END

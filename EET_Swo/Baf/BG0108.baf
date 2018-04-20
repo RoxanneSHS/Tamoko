@@ -1,0 +1,28 @@
+IF
+Global("SWO_Delay","Global",2)
+!InMyArea("Belt")
+THEN
+RESPONSE #100
+CreateCreature("Belt",[590.323],13)
+Continue()
+END
+
+IF
+Global("SWO_Delay","Global",2)
+!InMyArea("Liia")
+THEN
+RESPONSE #100
+CreateCreature("Liia",[590.323],13)
+Continue()
+END
+
+IF
+Global("SWO_Delay","Global",2)
+Global("MissImo","BG0108",0)
+!InParty("Imoen2")
+THEN
+RESPONSE #100
+SetGlobal("MissImo","BG0108",1)
+MoveGlobal("BG0108","Imoen2",[620.266])
+Continue()
+END

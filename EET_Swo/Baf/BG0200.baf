@@ -1,0 +1,27 @@
+IF
+Global("SWO_Delay","Global",2)
+Global("Swo_Ambush","BG0200",0)
+THEN
+RESPONSE #100
+SetGlobal("Swo_Ambush","BG0200",1)
+CreateCreatureObjectOffset("Swome1",Player1,[25.25])
+CreateCreatureObjectOffset("Swome2",Player1,[-45.25])
+CreateCreatureObjectOffset("Swome3",Player1,[25.-45])
+CreateCreatureObjectOffset("Swome4",Player1,[65.65])
+Wait(2)
+ActionOverride("Swome1",StartDialogNoSet([PC])
+Continue()
+END
+
+IF
+Global("SWO_Delay","Global",3)
+Global("Swo_Tamok","BG0200",0)
+!Dead("Tamoko")
+THEN
+RESPONSE #100
+SetGlobal("Swo_Tamok","BG0200",1)
+CreateCreature("Tamoko",[1900.2850],8)
+Wait(2)
+ActionOverride("Tamoko",ChangeAIScript("SwoTamok",OVERRIDE))
+Continue()
+END

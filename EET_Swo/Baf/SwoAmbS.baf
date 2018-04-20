@@ -1,0 +1,20 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneId(Player1)
+ActionOverride("Swome1",TakePartyItem("SW2H16"))
+Wait(2)
+ActionOverride("swome1",DestroyItem("SW2H16"))
+Wait(2)
+GiveItemCreate("bdshkoro","swome2",1,0,0)
+GiveItemCreate("bdshkoro","swome3",1,0,0)
+Wait(2)
+ActionOverride("swome2",Enemy())
+ActionOverride("swome3",Enemy())
+ActionOverride("swome4",Enemy())
+Wait(2)
+EndCutSceneMode()
+ActionOverride("swome1",ReallyForceSpell(Myself,DRYAD_TELEPORT))
+AddJournalEntry(@1003,QUEST)
+END
