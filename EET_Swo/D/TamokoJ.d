@@ -75,7 +75,7 @@ END
 CHAIN
 IF~~THEN TamokoJ Palace2
 ~Without ambitions there wouldn't have been my failures, so much is true. But that makes not trying to achieve something not an option for me. Not trying would have meant a squalid life for me.~
-=~Except for my poor mother, nobody ever cared about a fatherless Kara-Tur halfbred. From where I started there is only one way and that leads uphill. Everybody can fall down but those at the bottom will not stay down if they have a choice.~
+=~Except for my poor mother, nobody ever cared about a fatherless Kara-Tur halfbreed. From where I started there is only one way and that leads uphill. Everybody can fall down but those at the bottom will not stay down if they have a choice.~
 =~One may listen to the false people's promises but the urge to move is too strong to ignore whichever option appears before you.~
 END
 ++~This drove you into the faith of an evil god, is that so?~+ Palace3
