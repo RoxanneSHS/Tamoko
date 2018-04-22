@@ -53,3 +53,6 @@ EXTEND_BOTTOM ~winski.bcs~ ~EET_Swo/baf/SwoClean.baf~
 
 COPY_EXISTING ~Delthy.CRE~ ~override~
 WRITE_ASCII 0x258 ~SwoClean~ #8
+
+STRING_SET
+73926 @1006

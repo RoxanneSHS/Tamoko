@@ -64,4 +64,10 @@ I_C_T BDKorlas 5 Swo_KorlTamok
 ==TamokoJ IF~InParty("Tamoko")~THEN~Who was the one to buy it?~
 ==BDKorlas IF~InParty("Tamoko")~THEN~I wouldn't tell you even if I knew. The deal was through middlemen. Good gold and no questions, we were not in a position to reject it.~END
 
- 
+ ADD_TRANS_TRIGGER Tamoko 23
+~ReputationLT(Player1,9)~
+
+EXTEND_BOTTOM Tamoko 23
+IF~ReputationGT(Player1,8)~THEN REPLY~If I must kill you to pass, then so be it. I do so forgiving you your transgressions against me.~GOTO 21
+IF~ReputationGT(Player1,8)~THEN REPLY~If you would throw your life away, then you are already dead. If that is your choice, then you do not need me.~GOTO 25
+END 
