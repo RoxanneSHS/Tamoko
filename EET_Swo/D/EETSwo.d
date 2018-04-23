@@ -71,3 +71,7 @@ EXTEND_BOTTOM Tamoko 23
 IF~ReputationGT(Player1,8)~THEN REPLY~If I must kill you to pass, then so be it. I do so forgiving you your transgressions against me.~GOTO 21
 IF~ReputationGT(Player1,8)~THEN REPLY~If you would throw your life away, then you are already dead. If that is your choice, then you do not need me.~GOTO 25
 END 
+
+I_C_T BDIreni 23 Swo_IrenTamok
+==BDIreni IF~InParty("Tamoko")~THEN~(Points at Tamoko) Your Banite priestess could tell you of the power of dead gods, she followed one and then another who wanted to become heir. And now she follows the power she found in you.~
+END

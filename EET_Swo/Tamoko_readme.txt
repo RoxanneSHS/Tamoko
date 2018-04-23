@@ -19,3 +19,6 @@ Notes
 
 - Practically nothing in the original scripting of EET was changed except the one extra condition to start the transition (i.e. make a report to the dukes first). 
 
+Install order:
+If you use any of them, then Sarevok Romance installs prior Tamoko and SandrahNPC after it. This way they recognise each others presence and provide compatibility of content.
+

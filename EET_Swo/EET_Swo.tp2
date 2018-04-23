@@ -56,3 +56,14 @@ WRITE_ASCII 0x258 ~SwoClean~ #8
 
 STRING_SET
 73926 @1006
+
+COPY ~EET_Swo/Misc/Sarevnd2.2da~ ~override~ REPLACE ~99999~ @1006
+
+ACTION_IF FILE_EXISTS_IN_GAME ~ls#sare3.2da~ THEN BEGIN
+
+COPY ~sarevokromance/epilogues/ls#sarep.2da~ ~override/ls#sare3.2da~
+  REPLACE ~99999~ @1006
+ 
+PRINT ~ Compatibility with Sarevok Romance added~ 
+
+END
