@@ -57,11 +57,30 @@ SetGlobal("Swo_SkieReact","Locals",2)
 END
 
 IF
-OR(4)
+GlobalGT("Chapter","Global",7)
+InParty("CVSandr")
+Global("SanHealTamok","LOCALS",0)
+InParty(Myself)
+OR(7)
+SpellCastOnMe("CVSandr",CLERIC_CURE_LIGHT_WOUNDS)
+SpellCastOnMe("CVSandr",CLERIC_CURE_MEDIUM_WOUNDS)
+SpellCastOnMe("CVSandr",CLERIC_CURE_CRITICAL_WOUNDS)
+SpellCastOnMe("CVSandr",CLERIC_HEAL)
+SpellCastOnMeRES("Spin109","CVSandr")
+SpellCastOnMeRES("SanHand","CVSandr")
+SpellCastOnMeRES("cvwoun","CVSandr")
+THEN
+RESPONSE #100
+SetGlobal("SanHealTamok","LOCALS",1)
+END
+
+IF
+OR(5)
 Global("Swo_TamokInt","Global",1)
 Global("Swo_TamokInt","Global",3)
 Global("Swo_TamokInt","Global",5)
 Global("Swo_SkieReact","Locals",2)
+Global("SanHealTamok","LOCALS",1)
 InParty(Myself)
 !See([ENEMY])
 CombatCounter(0)
