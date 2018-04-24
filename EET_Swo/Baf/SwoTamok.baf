@@ -40,7 +40,9 @@ SetGlobal("Swo_TamokInt","Global",5)
 END
 
 IF
+OR(2)
 Global("Chapter","Global",8)
+Global("Chapter","Global",9)
 Global("Swo_SkieReact","Locals",0)
 See("BDSkie")
 THEN
