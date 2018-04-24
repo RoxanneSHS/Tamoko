@@ -77,12 +77,22 @@ SetGlobal("SanHealTamok","LOCALS",1)
 END
 
 IF
-OR(5)
+PartyRested()
+Global("Swo_SkieReact","Locals",3)
+GlobalGT("Chapter","Global",8)
+THEN
+RESPONSE #100
+SetGlobal("Swo_SkieReact","Locals",4)
+END
+
+IF
+OR(6)
 Global("Swo_TamokInt","Global",1)
 Global("Swo_TamokInt","Global",3)
 Global("Swo_TamokInt","Global",5)
 Global("Swo_SkieReact","Locals",2)
 Global("SanHealTamok","LOCALS",1)
+Global("Swo_SkieReact","Locals",4)
 InParty(Myself)
 !See([ENEMY])
 CombatCounter(0)

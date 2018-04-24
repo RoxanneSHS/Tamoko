@@ -114,3 +114,36 @@ CHAIN
 IF~~THEN TamokoJ Skie4
 ~*<CHARNAME>, Gorion's ward*, I remember the entry. But it was crossed out long before he went to Candlekeep to eliminate Rieltar and the others. ~
 =~Anyway, I was just lost in memories. It does not help us here today. Let us forget it and move on.~EXIT
+
+CHAIN
+IF~Global("Swo_SkieReact","Locals",4) ~THEN TamokoJ Gorion1
+~Recently I remembered the very first time we met, <CHARNAME>. Do you recall it?~
+DO~SetGlobal("Swo_SkieReact","Locals",5) ~
+END
+++~You came to betray Sarevok, in the streets of Baldur's Gate we met.~+ Gorion1a
+++~I got a glance of you before Gorion ordered me to run to safety.~+ Gorion1b
+++~I don't remember it any more, to be honest.~+ Gorion1c
+
+CHAIN
+IF~~THEN TamokoJ Gorion1a
+~I did never betray Sarevok, I tried to save his life, Anyway, that was not our first meeting.~EXTERN TamokoJ Gorion2
+
+CHAIN
+IF~~THEN TamokoJ Gorion1b
+~You did well to listen to him otherwise you wouldn't be here today.~EXTERN TamokoJ Gorion2
+
+CHAIN
+IF~~THEN TamokoJ Gorion1c
+~I must have impressed you as little as you impressed me on that occasion.~EXTERN TamokoJ Gorion2
+
+CHAIN
+IF~~THEN TamokoJ Gorion2
+~It was outside of Candlekeep on the day Gorion died. He gave his life for yours. You just ran. A pathetic weakling compared to Sarevok. You are here today while he and Gorion are both dead.~  
+END
+++~You attacked Gorion with spells while Sarevok did the hackwork.~+ Gorion3
+++~Neither of you scared me for too long. It was an ambush and a surprise. You were luck, Girion sadly was not.~+ Gorion3
+++~Those two are dead - and many more. You and I are still alive.~+ Gorion3
+
+CHAIN
+IF~~THEN TamokoJ Gorion3
+~I did not bring this up to dwell on memories. I compare the <PRO_MANWOMAN> you are today with the fledgling you were then. You grew fast and you are growing still. It is impressive and it gives me confidence. Many have died since that day. You and I are still alive. We have something they had not. Make sure you do not lose it, <CHARNAME>.~EXIT
