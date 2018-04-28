@@ -1,4 +1,17 @@
 IF
+Die()
+THEN
+RESPONSE #100
+CreateVisualEffectObject("SPHOLY",Myself)
+ActionOverride(Player1,DisplayStringHead(Myself,@1007))
+DropInventory()
+Wait(2)
+LeaveParty()
+ApplySpellRES("SPWI055",Myself) 
+DestroySelf()
+END	
+
+IF
 Global("InParty","LOCALS",0)
 InParty("Tamoko")  
 THEN

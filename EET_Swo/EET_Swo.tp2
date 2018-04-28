@@ -40,6 +40,7 @@ COPY_EXISTING ~Tamoko.cre~ ~override~
 WRITE_ASCII 0x34 ~Tamokos~ #8
 WRITE_ASCII 0x3c ~Tamokom~ #8
 SAY BIO @1005
+SAY DYING @1008
 
 APPEND ~pdialog.2da~
 ~Tamoko TamokoP TamokoJ TamokoD *** *** *** ***~
