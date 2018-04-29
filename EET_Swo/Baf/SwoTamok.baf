@@ -90,6 +90,20 @@ SetGlobal("SanHealTamok","LOCALS",1)
 END
 
 IF
+Global("SanHealTamok","LOCALS",2)
+InParty("CVSandr")
+InParty(Myself)
+OR(3)
+AreaCheck("BD5000")
+AreaCheck("BD7300")
+AreaCheck("BD7200")
+Delay(90)
+THEN
+RESPONSE #100
+SetGlobal("SanHealTamok","LOCALS",3)
+END
+
+IF
 PartyRested()
 Global("Swo_SkieReact","Locals",3)
 GlobalGT("Chapter","Global",8)
@@ -99,12 +113,13 @@ SetGlobal("Swo_SkieReact","Locals",4)
 END
 
 IF
-OR(6)
+OR(7)
 Global("Swo_TamokInt","Global",1)
 Global("Swo_TamokInt","Global",3)
 Global("Swo_TamokInt","Global",5)
 Global("Swo_SkieReact","Locals",2)
 Global("SanHealTamok","LOCALS",1)
+Global("SanHealTamok","LOCALS",3)
 Global("Swo_SkieReact","Locals",4)
 InParty(Myself)
 !See([ENEMY])

@@ -68,3 +68,10 @@ COPY ~sarevokromance/epilogues/ls#sarep.2da~ ~override/ls#sare3.2da~
 PRINT ~ Compatibility with Sarevok Romance added~ 
 
 END
+
+COPY_EXISTING ~scrl3f.itm~ ~override~
+SAY DESC @1009
+WRITE_SHORT 0x1c 0x25 
+WRITE_BYTE 0x4c 0x08 
+BUT_ONLY_IF_IT_CHANGES
+PRINT ~ Diary consistency  added~
