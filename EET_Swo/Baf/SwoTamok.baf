@@ -53,6 +53,19 @@ SetGlobal("Swo_TamokInt","Global",5)
 END
 
 IF
+AreaCheck("bd7100")
+Global("Swo_TamokInt","Global",6)
+OR(2)
+Range("Glint Romance 1",50)
+Range("Corwin Romance 2",50)
+CombatCounter(0)
+!See([ENEMY])
+THEN
+RESPONSE #100
+SetGlobal("Swo_TamokInt","Global",7)
+END
+
+IF
 OR(2)
 Global("Chapter","Global",8)
 Global("Chapter","Global",9)
@@ -113,10 +126,11 @@ SetGlobal("Swo_SkieReact","Locals",4)
 END
 
 IF
-OR(7)
+OR(8)
 Global("Swo_TamokInt","Global",1)
 Global("Swo_TamokInt","Global",3)
 Global("Swo_TamokInt","Global",5)
+Global("Swo_TamokInt","Global",7)
 Global("Swo_SkieReact","Locals",2)
 Global("SanHealTamok","LOCALS",1)
 Global("SanHealTamok","LOCALS",3)

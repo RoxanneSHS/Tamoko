@@ -147,3 +147,30 @@ END
 CHAIN
 IF~~THEN TamokoJ Gorion3
 ~I did not bring this up to dwell on memories. I compare the <PRO_MANWOMAN> you are today with the fledgling you were then. You grew fast and you are growing still. It is impressive and it gives me confidence. Many have died since that day. You and I are still alive. We have something they had not. Make sure you do not lose it, <CHARNAME>.~EXIT
+
+CHAIN
+IF~Global("Swo_TamokInt","Global",7)~THEN TamokoJ Swordire1
+~Sarevok's missing sword of chaos...This Caelar does not have it. She did not need a sample of your blood to know about your heritage.~
+DO~SetGlobal("Swo_TamokInt","Global",8)~
+END
+++~Didn't you mention someone in Amn who would be interested?~+ Swordire2
+++~What does the sword mean to you, Tamoko, a symbol of your lost love?~+ Swordire3
+++~The sword, I almost forgot about it. Why would it be important.~+ Swordire2 
+
+CHAIN
+IF~~THEN TamokoJ Swordire2
+~Korlasz or her servants mentioned it. The sword is nothing, the interest someone may have in your blood is disturbing. The sooner we finish this foolish Shining Lady, the sooner we can take care of that matter.~
+END 
+++~What does the sword mean to you, Tamoko, a symbol of your lost love?~+ Swordire3
+++~The Shining Lady is our opponent here and now. Your phantom sword thief is secondary only.~+ Swordire4
+
+CHAIN
+IF~~THEN TamokoJ Swordire3
+~Do you really think that I loved Sarevok just because I shared his bed?~
+END
+++~You were begging for his life when we first met.~+ Swordire4
+++~Are you saying that you lied about your love to him and to me. You just used him like all the others?~+ Swordire4
+
+CHAIN
+IF~~THEN TamokoJ Swordire4
+~You still understand very little of what is going on, <CHARNAME>. Sarevok was not the one to claim the throne of his father. All his death has resulted in, was to provide more bhaalspawn essence to the abyss. Nobody has an interest in that and I tried to prevent it. We do not want to wake up Bhaal. The time is not yet for anyone to try it.~ EXIT
