@@ -126,6 +126,20 @@ SetGlobal("Swo_SkieReact","Locals",4)
 END
 
 IF
+PartyRested()
+GlobalGT("Chapter","Global",9)
+Global("Swo_camp","LOCALS",0)
+AreaType(OUTDOOR)
+OR(2)
+Global("Swo_SkieReact","Locals",5)
+GlobalLT("Swo_SkieReact","Locals",2)
+THEN
+RESPONSE #100
+DayNight(MIDNIGHT)
+SetGlobal("Swo_camp","LOCALS",1)
+END
+
+IF
 Global("Swo_Madele","Global",1)
 AreaType(OUTDOOR)
 Delay(80)
@@ -135,7 +149,7 @@ SetGlobal("Swo_Madele","Global",2)
 END
 
 IF
-OR(9)
+OR(10)
 Global("Swo_TamokInt","Global",1)
 Global("Swo_TamokInt","Global",3)
 Global("Swo_TamokInt","Global",5)
@@ -145,6 +159,7 @@ Global("SanHealTamok","LOCALS",1)
 Global("SanHealTamok","LOCALS",3)
 Global("Swo_SkieReact","Locals",4)
 Global("Swo_Madele","Global",2)
+Global("Swo_camp","LOCALS",1)
 InParty(Myself)
 !See([ENEMY])
 CombatCounter(0)

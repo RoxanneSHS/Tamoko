@@ -197,3 +197,34 @@ CHAIN
 IF~~THEN TamokoJ AfterMadel3
 ~Those who think of themselves as living powers may not be it for long. Those assumed to be forever gone may return sooner than they can be forgotten. Make sure you take that into account when making choices, <CHARNAME>. Learn from what Sarevok refused to learn.~EXIT
 
+CHAIN 
+IF ~ Global("Swo_camp","LOCALS",1)~THEN TamokoJ Campfire1
+~(You wake up to find that it is still dark and your companions are asleep, except for...)~
+DO~SetGlobal("Swo_camp","LOCALS",2)~
+=~(Tamoko sits near the campfire staring into the dying flames. Given that she must be twice your age, or Sarevok's, she is still a very attractive woman with the exotic touch of her Kara-Turan heritage.)~
+END
+++~Was it really love that connected you and Sarevok or was it rather some alliance to strive for power?~+ Campfire2
+++~You turn back to your pillow. You need all the rest you can get to face the challenge of the next day.)~DO~StartMovie("Rest")~EXIT
+++~Was it just Cythandria's youth that made Sarevok turn to her and abandon you?~+ Campfire2
+
+CHAIN
+IF~~THEN TamokoJ Campfire2
+~You are a good observer, <CHARNAME>. I don't deny all of us were ambitious - and angry. We wanted to show all those in Baldur's Gate that treated us like outcasts our power, make them kneel before us and ask for mercy. We envisioned the scenes and our satisfaction from them before we went between the sheets. Our lust for power and our lust for each other were fierce and strong.~
+END
+++~Lust is not love, Tamoko.~+ Campfire3
+++~A relationship built on such foundation was supposed to fail when a younger woman emerges, like Cythandria.~+ Campfire3
+
+CHAIN
+IF~~THEN TamokoJ Campfire3
+~I have asked myself the same again and again. I thought I loved Sarevok. I wished for it to be true. And maybe it was for a time. But there were too many other aspects in our relationship and love was not the most important.~
+=~Sarevok changed and probably I changed as well. That mage whore was just a symptom of the disease that had grown in Sarevok's heart. He may have loved me once but he lost the ability to love when his ideas and visions began to eat him up. He surely never loved Cythandria.~
+END
+++~And you, are you sure you stopped loving him?~+ Campfire4
+++~I don't think Sarevok was ever able to love anyone but himself. I'm not even sure you are.~+ Campfire4
+
+CHAIN
+IF~~THEN TamokoJ Campfire4
+~You are even younger than he was. You learned too little of life behind those walls of Candlekeep. Keep your illusions of love, forgiveness, dreams that come true...~
+=~We are out here fighting for survival, we all are. ~
+=~Stop talking - we need a good night's rest to be fit for what awaits us.~DO~StartMovie("Rest")~EXIT
+ 
