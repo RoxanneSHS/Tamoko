@@ -174,3 +174,26 @@ END
 CHAIN
 IF~~THEN TamokoJ Swordire4
 ~You still understand very little of what is going on, <CHARNAME>. Sarevok was not the one to claim the throne of his father. All his death has resulted in, was to provide more bhaalspawn essence to the abyss. Nobody has an interest in that and I tried to prevent it. We do not want to wake up Bhaal. The time is not yet for anyone to try it.~ EXIT
+
+CHAIN
+IF~ Global("Swo_Madele","Global",2)~THEN TamokoJ AfterMadel1
+~Nothing is permanent, <CHARNAME>, victories and defeats are temporary events in history's flow.~
+DO~SetGlobal("Swo_Madele","Global",3)~
+END
+++~Does that refer to Cyric's taking the portfolio of the Dead Three?~+ AfterMadel2
+++~I still wonder what you and Madele were talking about back in that temple.~+ AfterMadel2
+++~That temple visit seems to have left you a bit uneasy. Your past catches up with you.~+ AfterMadel2
+
+CHAIN
+IF~~THEN TamokoJ AfterMadel2
+~My past is the key to my future. The mad Cyric is just an upstart without substance. The heirs of Jergal will reclaim their power in just a while.~
+END
+++~The heirs of Jergal are the Dead Three, and they have that name, well, because they are dead.~+ AfterMadel3
+++~Dream on, just like Sarevok dreamt and that blind fool dreams. None of those dead gods is supposed to threaten us again.~+ AfterMadel3
+++~You carry a large load of death gods and mortals with you, Tamoko. Wake up and start to deal with those who live.~+ AfterMadel3
+IF~!InParty("CVSandr")~THEN REPLY~Whether is is Bhaal or it is Bane, you want to be on the winning side. Your ambitions will be your downfall, Tamoko, since none of the two will happen.~+ AfterMadel3
+
+CHAIN
+IF~~THEN TamokoJ AfterMadel3
+~Those who think of themselves as living powers may not be it for long. Those assumed to be forever gone may return sooner than they can be forgotten. Make sure you take that into account when making choices, <CHARNAME>. Learn from what Sarevok refused to learn.~EXIT
+

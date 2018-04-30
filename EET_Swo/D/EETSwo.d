@@ -75,3 +75,9 @@ END
 I_C_T BDIreni 23 Swo_IrenTamok
 ==BDIreni IF~InParty("Tamoko")~THEN~(Points at Tamoko) Your Banite priestess could tell you of the power of dead gods, she followed one and then another who wanted to become heir. And now she follows the power she found in you.~
 END
+
+I_C_T BDMadele 2 Swo_Madele
+==TamokoJ IF~InParty("Tamoko")~THEN~The faithful will be champions one day...~
+==BDMadele IF~InParty("Tamoko")~THEN~The Black Hand is just sleeping like my Lord sleeps. They will sweep the usurpers away when the day to return will come.~
+==TamokoJ IF~InParty("Tamoko")~THEN~They may or they may find their successors, who knows.~
+==TamokoJ IF~InParty("Tamoko")~THEN~Bah, the Banites have reason to destroy Cyric as good as we have.~END

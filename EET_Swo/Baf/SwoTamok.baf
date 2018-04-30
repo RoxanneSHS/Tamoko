@@ -126,7 +126,16 @@ SetGlobal("Swo_SkieReact","Locals",4)
 END
 
 IF
-OR(8)
+Global("Swo_Madele","Global",1)
+AreaType(OUTDOOR)
+Delay(80)
+THEN
+RESPONSE #100
+SetGlobal("Swo_Madele","Global",2)
+END
+
+IF
+OR(9)
 Global("Swo_TamokInt","Global",1)
 Global("Swo_TamokInt","Global",3)
 Global("Swo_TamokInt","Global",5)
@@ -135,6 +144,7 @@ Global("Swo_SkieReact","Locals",2)
 Global("SanHealTamok","LOCALS",1)
 Global("SanHealTamok","LOCALS",3)
 Global("Swo_SkieReact","Locals",4)
+Global("Swo_Madele","Global",2)
 InParty(Myself)
 !See([ENEMY])
 CombatCounter(0)
