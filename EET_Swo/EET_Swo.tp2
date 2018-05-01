@@ -35,6 +35,7 @@ EXTEND_TOP ~Safana.bcs~ ~EET_Swo/baf/SafanaUC.baf~
 
 COPY ~EET_Swo/Misc/Tamokos.bmp~ ~override~
 COPY ~EET_Swo/Misc/Tamokom.bmp~ ~override~
+COPY ~EET_Swo/Misc/sworot.spl~ ~override~
 
 COPY_EXISTING ~Tamoko.cre~ ~override~
 WRITE_ASCII 0x34 ~Tamokos~ #8

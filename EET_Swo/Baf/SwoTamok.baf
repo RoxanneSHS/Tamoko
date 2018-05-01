@@ -43,6 +43,15 @@ SetGlobal("Swo_TamokInt","Global",3)
 END
 
 IF
+AreaCheck("BD4400")
+Global("Swo_Desease","Locals",0)
+THEN
+RESPONSE #100
+SetGlobal("Swo_Desease","Locals",1)
+ApplySpellRES("sppr610",Myself)
+END
+
+IF
 AreaCheck("bd0100")
 Global("Swo_TamokInt","Global",4)
 CombatCounter(0)
