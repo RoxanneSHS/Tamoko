@@ -52,6 +52,10 @@ SetGlobal("Swo_TamokInt","Global",3)
 END
 
 IF
+GlobalGT("Chapter","Global",9)
+OR(3)
+See("BDInfec6")
+See("BDPCrus")
 AreaCheck("BD4400")
 Global("Swo_Desease","Locals",0)
 THEN
