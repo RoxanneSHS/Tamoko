@@ -48,7 +48,7 @@ Global("Swo_Desease","Locals",0)
 THEN
 RESPONSE #100
 SetGlobal("Swo_Desease","Locals",1)
-ApplySpellRES("sppr610",Myself)
+ApplySpellRES("sworot",Myself)
 END
 
 IF
