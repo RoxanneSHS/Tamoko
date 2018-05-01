@@ -52,6 +52,16 @@ ApplySpellRES("sworot",Myself)
 END
 
 IF
+Global("Swo_Desease","Locals",1)
+HPPercentLT(Myself,30)
+CombatCounter(0)
+!See([ENEMY])
+THEN
+RESPONSE #100
+SetGlobal("Swo_Desease","Locals",2)
+END
+
+IF
 AreaCheck("bd0100")
 Global("Swo_TamokInt","Global",4)
 CombatCounter(0)
@@ -158,7 +168,7 @@ SetGlobal("Swo_Madele","Global",2)
 END
 
 IF
-OR(10)
+OR(11)
 Global("Swo_TamokInt","Global",1)
 Global("Swo_TamokInt","Global",3)
 Global("Swo_TamokInt","Global",5)
@@ -169,6 +179,7 @@ Global("SanHealTamok","LOCALS",3)
 Global("Swo_SkieReact","Locals",4)
 Global("Swo_Madele","Global",2)
 Global("Swo_camp","LOCALS",1)
+Global("Swo_Desease","Locals",2)
 InParty(Myself)
 !See([ENEMY])
 CombatCounter(0)

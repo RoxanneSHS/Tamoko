@@ -227,4 +227,11 @@ IF~~THEN TamokoJ Campfire4
 ~You are even younger than he was. You learned too little of life behind those walls of Candlekeep. Keep your illusions of love, forgiveness, dreams that come true...~
 =~We are out here fighting for survival, we all are. ~
 =~Stop talking - we need a good night's rest to be fit for what awaits us.~DO~StartMovie("Rest")~EXIT
+
+CHAIN
+IF~Global("Swo_Desease","Locals",2)~ THEN TamokoJ Diseased
+~Now I will never see Kara-Tur...I always hoped I would someday.~
+DO~SetGlobal("Swo_Desease","Locals",3)~
+=~You may ask why...I was not even born there. It has been a curse all my life. You suffer from your blood and I did from mine, the father I never saw who bequeathed me with a homeland I've never set foot on...(Cough).~
+=~Ha! Life is full of antics, <CHARNAME>.~ DO~CreateVisualEffectObject("SPHOLY",Myself) ActionOverride(Player1,DisplayStringHead(Myself,@1007)) DropInventory() Wait(2)LeaveParty()ApplySpellRES("SPWI055",Myself) DestroySelf()~EXIT
  
