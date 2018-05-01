@@ -23,6 +23,15 @@ MakeGlobal()
 END
 
 IF
+GlobalLT("Swo_Desease","Locals",2)
+HPPercentLT(Myself,30)
+THEN
+RESPONSE #100
+SetGlobal("Swo_Desease","Locals",2)
+StartDialogueNoSet(Player1)
+END
+
+IF
 AreaCheck("BG0123")
 Range("Door0125",90)
 Global("Swo_TamokInt","Global",0)
@@ -49,16 +58,6 @@ THEN
 RESPONSE #100
 SetGlobal("Swo_Desease","Locals",1)
 ApplySpellRES("sworot",Myself)
-END
-
-IF
-Global("Swo_Desease","Locals",1)
-HPPercentLT(Myself,30)
-CombatCounter(0)
-!See([ENEMY])
-THEN
-RESPONSE #100
-SetGlobal("Swo_Desease","Locals",2)
 END
 
 IF
