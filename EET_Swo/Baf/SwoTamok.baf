@@ -53,11 +53,12 @@ END
 
 IF
 GlobalGT("Chapter","Global",9)
+!StateCheck(Myself,STATE_DISEASED)
 OR(3)
 See("BDInfec6")
 See("BDPCrus")
 AreaCheck("BD4400")
-Global("Swo_Desease","Locals",0)
+GlobalLT("Swo_Desease","Locals",2)
 THEN
 RESPONSE #100
 SetGlobal("Swo_Desease","Locals",1)
