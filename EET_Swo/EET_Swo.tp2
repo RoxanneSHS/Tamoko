@@ -9,7 +9,7 @@ LANGUAGE ~English~ ~english~ ~EET_Swo/Tra/Setup-Swo.tra~
 BEGIN ~The Sword of Chaos~
 REQUIRE_PREDICATE GAME_IS ~ eet~ @1
 
-ADD_JOURNAL @1002 @1003 @1004 USING ~EET_Swo/Tra/Setup-Swo.tra~
+ADD_JOURNAL @1002 @1003 @1004 @1011 USING ~EET_Swo/Tra/Setup-Swo.tra~
 
 COPY_EXISTING ~BDKorme1.CRE~ ~override/Swome1.cre~
 WRITE_ASCII 0x280 ~Swome1~ #8
@@ -32,6 +32,7 @@ EXTEND_TOP ~bg0108.bcs~ ~EET_Swo/baf/BG0108.baf~
 EXTEND_TOP ~bg0200.bcs~ ~EET_Swo/baf/BG0200.baf~
 EXTEND_TOP ~bg0123.bcs~ ~EET_Swo/baf/BG0123saf.baf~
 EXTEND_TOP ~Safana.bcs~ ~EET_Swo/baf/SafanaUC.baf~
+EXTEND_TOP ~ar0601.bcs~ ~EET_Swo/baf/ar0601.baf~
 
 COPY ~EET_Swo/Misc/Tamokos.bmp~ ~override~
 COPY ~EET_Swo/Misc/Tamokom.bmp~ ~override~

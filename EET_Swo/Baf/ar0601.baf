@@ -1,0 +1,13 @@
+IF
+GlobalGT("TalkedToDjinni","AR0601",0)
+PartyHasItem("SW2H16")
+GlobalGT("Swo_TamokInt","Global",5)
+Global("Swo_FinishJour","AR0601",0)
+Delay(12)
+THEN
+RESPONSE #100
+SetGlobal("Swo_FinishJour","AR0601",1)
+AddJournalEntry(@1011,QUEST_DONE)
+Wait(2)
+ActionOverride(Player1,DisplayStringHead(Myself,@1012))
+END
