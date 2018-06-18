@@ -59,6 +59,7 @@ See("BDInfec6")
 See("BDPCrus")
 AreaCheck("BD4400")
 GlobalLT("Swo_Desease","Locals",2)
+Delay(15)
 THEN
 RESPONSE #100
 SetGlobal("Swo_Desease","Locals",1)
