@@ -141,7 +141,7 @@ IF~~THEN TamokoJ Gorion2
 ~It was outside of Candlekeep on the day Gorion died. He gave his life for yours. You just ran. A pathetic weakling compared to Sarevok. You are here today while he and Gorion are both dead.~  
 END
 ++~You attacked Gorion with spells while Sarevok did the hackwork.~+ Gorion3
-++~Neither of you scared me for too long. It was an ambush and a surprise. You were luck, Girion sadly was not.~+ Gorion3
+++~Neither of you scared me for too long. It was an ambush and a surprise. You were lucky, Gorion sadly was not.~+ Gorion3
 ++~Those two are dead - and many more. You and I are still alive.~+ Gorion3
 
 CHAIN
