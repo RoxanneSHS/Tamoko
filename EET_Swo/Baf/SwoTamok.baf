@@ -54,10 +54,22 @@ END
 IF
 GlobalGT("Chapter","Global",9)
 !StateCheck(Myself,STATE_DISEASED)
-OR(3)
+OR(2)
 See("BDInfec6")
 See("BDPCrus")
-AreaCheck("BD4400")
+GlobalLT("Swo_Desease","Locals",2)
+Delay(15)
+THEN
+RESPONSE #100
+SetGlobal("Swo_Desease","Locals",1)
+ApplySpellRES("sworot",Myself)
+END
+
+IF
+Global("Chapter","Global",12)
+AreaCheck("BD4700")
+Dead("BDbelhif")
+!StateCheck(Myself,STATE_DISEASED)
 GlobalLT("Swo_Desease","Locals",2)
 Delay(15)
 THEN
