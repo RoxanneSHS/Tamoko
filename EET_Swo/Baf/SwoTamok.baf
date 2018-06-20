@@ -185,6 +185,29 @@ SetGlobal("Swo_Madele","Global",2)
 END
 
 IF
+Global("Chapter","Global",12)
+Global("Swo_InJail","Global",0)
+AreaCheck("BD4300")
+InParty(Myself)
+Dead("BDbelhif")
+THEN
+RESPONSE #100
+SetGlobal("Swo_InJail","Global",1)
+END
+
+IF
+Global("Swo_InJail","Global",2)
+AreaCheck("bd0104")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+SetDialogue("TamokoJ")
+Wait(1)
+StartDialogNoSet(Player1)
+END
+
+IF
 OR(11)
 Global("Swo_TamokInt","Global",1)
 Global("Swo_TamokInt","Global",3)

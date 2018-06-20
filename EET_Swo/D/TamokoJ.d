@@ -234,4 +234,19 @@ IF~Global("Swo_Desease","Locals",2)~ THEN TamokoJ Diseased
 DO~SetGlobal("Swo_Desease","Locals",3)~
 =~You may ask why...I was not even born there. It has been a curse all my life. You suffer from your blood and I did from mine, the father I never saw who bequeathed me with a homeland I've never set foot on...(Cough).~
 =~Ha! Life is full of antics, <CHARNAME>.~ DO~CreateVisualEffectObject("SPHOLY",Myself) ActionOverride(Player1,DisplayStringHead(Myself,@1007)) DropInventory() Wait(2)LeaveParty()ApplySpellRES("SPWI055",Myself) DestroySelf()~EXIT
+
+CHAIN
+IF~Global("Swo_InJail","Global",2)~THEN TamokoJ Jaildead
+~Following Bhaalspawns was my fate and seals my end, <CHARNAME>.~
+DO~SetGlobal("Swo_InJail","Global",3)~
+=~The Flaming Fist does not forgive their own errors to trust first Sarevok and then you. I was on their warrant list already, your downfall allowed them to strike.~
+END
+++~Tamoko, I'm sorry, but I can't help you at this moment. I'll come back if I can.~+ Jaildead2
+++~That was not foreseen. I wasn't aware they were still after you.~+ Jaildead2
+++~What will happen to you, Tamoko?~+ Jaildead2
+
+CHAIN
+IF~~THEN TamokoJ Jaildead2
+~There is nothing that you or anyone else can do for me now. The Dukes and the Fist want to see me hang, just as a symbol and scapegoat for their own mistakes.~
+=~I won't give them that show. Talona spoils their plan. My end is my own and dedicated to my Lord - Bane.~EXTERN TamokoJ Diseased
  

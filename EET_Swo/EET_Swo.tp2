@@ -1,5 +1,5 @@
 BACKUP ~EET_Swo/backup~
-AUTHOR ~Roxanne - https://twitter.com/Roxanne0Walsh or Roxanne_Walsh@mail.com~
+AUTHOR ~Roxanne - https://baldursextendedworld.com/Tamoko/ or roxanne@baldursextendedworld.com~
 
 VERSION ~v0.2~
 AUTO_TRA ~EET_Swo/Tra/%s~
@@ -33,6 +33,7 @@ EXTEND_TOP ~bg0200.bcs~ ~EET_Swo/baf/BG0200.baf~
 EXTEND_TOP ~bg0123.bcs~ ~EET_Swo/baf/BG0123saf.baf~
 EXTEND_TOP ~Safana.bcs~ ~EET_Swo/baf/SafanaUC.baf~
 EXTEND_TOP ~ar0601.bcs~ ~EET_Swo/baf/ar0601.baf~
+EXTEND_TOP ~bd0104.bcs~ ~EET_Swo/baf/bd0104.baf~
 
 COPY ~EET_Swo/Misc/Tamokos.bmp~ ~override~
 COPY ~EET_Swo/Misc/Tamokom.bmp~ ~override~

@@ -1,0 +1,14 @@
+IF
+Global("chapter","global",13)
+Global("bd_plot","Global",621)
+Global("Swo_InJail","Global",1)
+THEN
+RESPONSE #100
+SetGlobal("Swo_InJail","Global",2)
+SetGlobal("TamokoJoin","GLOBAL",0)
+MoveGlobal("bd0104","Tamoko",[465.672])  
+Wait(1)
+ActionOverride("Tamoko",SetDialogue("TamokoJ"))
+Wait(1)
+ApplySpellRES("sworot",Myself)
+END
