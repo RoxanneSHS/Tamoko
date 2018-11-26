@@ -4,7 +4,7 @@ BEGIN TamokoP
 CHAIN
 IF~Global("TamokoJoin","GLOBAL",1)~THEN TamokoP GoOnce
 ~I will never again degrade myself to begging a Bhaalspawn to keep me. We go our separate ways.~
-DO~SetGlobal("TamokoJoin","GLOBAL",0) EscapeAreaDestroy(60)~ EXIT
+DO~SetGlobal("TamokoJoin","GLOBAL",0) EscapeAreaDestroy(60)~EXIT
 
 CHAIN
 IF~Global("Swo_TamokInt","Global",1)~THEN TamokoJ Underc1

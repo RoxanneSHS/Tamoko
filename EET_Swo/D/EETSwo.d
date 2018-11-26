@@ -44,7 +44,7 @@ IF~Global("Swo_Ambush","BG0200",1)~THEN BDKorme1 GetSword
 ~There they are, this one there has the sword!~
 DO~SetGlobal("Swo_Ambush","BG0200",2)~
 ==BDKorme2~Risk nothing, they killed Sarevok, we only need the weapon for Korlasz.~
-==BDKorme1~Be quick before the guards get alarmed.~DO~ ClearAllActions() StartCutSceneMode() StartCutScene("SwoAmbS")~ EXIT
+==BDKorme1~Be quick before the guards get alarmed.~DO~ ClearAllActions() StartCutSceneMode() StartCutScene("SwoAmbS")~EXIT
 
 CHAIN
 IF WEIGHT #-5~Global("Safloot","bg0123",1)~THEN Safana ComeLoot

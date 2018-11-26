@@ -1,7 +1,7 @@
 BACKUP ~EET_Swo/backup~
 AUTHOR ~Roxanne - https://baldursextendedworld.com/Tamoko/ or roxanne@baldursextendedworld.com~
 
-VERSION ~v0.2~
+VERSION ~v0.3~
 AUTO_TRA ~EET_Swo/Tra/%s~
 
 LANGUAGE ~English~ ~english~ ~EET_Swo/Tra/Setup-Swo.tra~
