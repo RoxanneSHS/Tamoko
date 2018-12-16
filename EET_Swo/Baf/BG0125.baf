@@ -23,6 +23,7 @@ IF
 Global("SWO_Delay","Global",3)
 !InParty("CVSandr")
 !InParty("CVJenlig")
+!Global("EndOfBG1","GLOBAL",0)
 THEN
 RESPONSE #100
 SetGlobal("EndOfBG1","GLOBAL",0)
