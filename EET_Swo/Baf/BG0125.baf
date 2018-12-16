@@ -21,6 +21,7 @@ END
 
 IF
 Global("SWO_Delay","Global",3)
+Global("Chapter","Global",7)
 !InParty("CVSandr")
 !InParty("CVJenlig")
 !Global("EndOfBG1","GLOBAL",0)
