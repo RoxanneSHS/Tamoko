@@ -80,4 +80,4 @@ I_C_T BDMadele 2 Swo_Madele
 ==TamokoJ IF~InParty("Tamoko")~THEN~The faithful will be champions one day...~
 ==BDMadele IF~InParty("Tamoko")~THEN~The Black Hand is just sleeping like my Lord sleeps. They will sweep the usurpers away when the day to return will come.~
 ==TamokoJ IF~InParty("Tamoko")~THEN~They may or they may find their successors, who knows.~
-==TamokoJ IF~InParty("Tamoko")~THEN~Bah, the Banites have reason to destroy Cyric as good as we have.~END
+==BDMadele IF~InParty("Tamoko")~THEN~Bah, the Banites have reason to destroy Cyric as good as we have.~END
