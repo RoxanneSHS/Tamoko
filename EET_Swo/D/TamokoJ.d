@@ -65,6 +65,18 @@ IF~~THEN TamokoJ Korla5
 ~She is often right with what she says although I would not trust her if I were you. She has more hidden intentions than anyone else around.~EXIT
 
 CHAIN
+IF~Global("Swo_Sareroom","BD0130",1) ~ THEN TamokoJ Korsec1
+~Ah, Sarevok's little secret! Three arrangements of coloured torches, one is missing the purple torch.~
+DO~SetGlobal("Swo_Sareroom","BD0130",2)~
+END
+++~There were some coloured braziers in the other room. I wonder what happens if we restore the missing torch with the right coloured one.~+ Korsec2
+++~Do you have any idea what type of secret your former lover hid down here?~ Korsec2
+
+CHAIN
+IF~~THEN TamokoJ Korsec2
+~I have no idea which of his many secrets we might reveal but I am sure that the place is  not unguarded. Be ready to fight for the answer, <CHARNAME>.~EXIT
+
+CHAIN
 IF~Global("Swo_TamokInt","Global",5)~THEN TamokoJ Palace1
 ~Ha! Life is full of antics, <CHARNAME>. I stand here in the Ducal Palace of Baldur's Gate side by side with a Bhaalspawn just like it was promised to me long ago. And everything went different from what was planned.~
 DO~SetGlobal("Swo_TamokInt","Global",6)~

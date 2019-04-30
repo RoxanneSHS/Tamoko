@@ -89,6 +89,18 @@ SetGlobal("Swo_TamokInt","Global",5)
 END
 
 IF
+AreaCheck("bd0130")
+OR(3)
+Range("Bane_mural",30)
+Range("Trap_miscast_magic",30)
+Range("Sarcophagus_bane_room",30)
+Global("Swo_Sareroom","BD0130",0)
+THEN
+RESPONSE #100
+SetGlobal("Swo_Sareroom","BD0130",1)
+END
+
+IF
 AreaCheck("bd7100")
 Global("Swo_TamokInt","Global",6)
 OR(2)
@@ -208,7 +220,7 @@ StartDialogNoSet(Player1)
 END
 
 IF
-OR(11)
+OR(12)
 Global("Swo_TamokInt","Global",1)
 Global("Swo_TamokInt","Global",3)
 Global("Swo_TamokInt","Global",5)
@@ -220,6 +232,7 @@ Global("Swo_SkieReact","Locals",4)
 Global("Swo_Madele","Global",2)
 Global("Swo_camp","LOCALS",1)
 Global("Swo_Desease","Locals",2)
+Global("Swo_Sareroom","BD0130",1)
 InParty(Myself)
 !See([ENEMY])
 CombatCounter(0)
