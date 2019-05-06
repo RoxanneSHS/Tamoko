@@ -70,7 +70,7 @@ IF~Global("Swo_Sareroom","BD0130",1) ~ THEN TamokoJ Korsec1
 DO~SetGlobal("Swo_Sareroom","BD0130",2)~
 END
 ++~There were some coloured braziers in the other room. I wonder what happens if we restore the missing torch with the right coloured one.~+ Korsec2
-++~Do you have any idea what type of secret your former lover hid down here?~ Korsec2
+++~Do you have any idea what type of secret your former lover hid down here?~+ Korsec2
 
 CHAIN
 IF~~THEN TamokoJ Korsec2
