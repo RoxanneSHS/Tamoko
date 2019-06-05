@@ -25,6 +25,7 @@ COMPILE ~EET_Swo/D/EETSwo.d~
 COMPILE ~EET_Swo/baf/SwoTamok.baf~
 COMPILE ~EET_Swo/baf/SwoAmbS.baf~
 COMPILE ~EET_Swo/baf/SwoClean.baf~
+COMPILE ~EET_Swo/baf/SareSwo.baf~
 
 EXTEND_TOP ~bg0125.bcs~ ~EET_Swo/baf/bg0125.baf~
 EXTEND_TOP ~Sarevok_.bcs~ ~EET_Swo/baf/sareswo.baf~
@@ -44,6 +45,9 @@ WRITE_ASCII 0x34 ~Tamokos~ #8
 WRITE_ASCII 0x3c ~Tamokom~ #8
 SAY BIO @1005
 SAY DYING @1008
+
+COPY_EXISTING ~Sarevo.cre~ ~override~
+WRITE_ASCII 0x250 ~SareSwo~ #8
 
 APPEND ~pdialog.2da~
 ~Tamoko TamokoP TamokoJ TamokoD *** *** *** ***~
