@@ -47,6 +47,7 @@ SAY BIO @1005
 SAY DYING @1008
 
 COPY_EXISTING ~Sarevo.cre~ ~override~
+WRITE_ASCII 0x248 ~Sarevok_~ #8
 WRITE_ASCII 0x250 ~SareSwo~ #8
 
 APPEND ~pdialog.2da~
