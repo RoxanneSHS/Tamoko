@@ -18,11 +18,11 @@ END
 
 IF
 Global("SWO_Delay","Global",2)
-Global("MissImo","BG0108",0)
+Global("MissImo","%NBaldursGate_DucalPalace_L1%",0)
 !InParty("Imoen2")
 THEN
 RESPONSE #100
-SetGlobal("MissImo","BG0108",1)
-MoveGlobal("BG0108","Imoen2",[620.266])
+SetGlobal("MissImo","%NBaldursGate_DucalPalace_L1%",1)
+MoveGlobal("%NBaldursGate_DucalPalace_L1%","Imoen2",[620.266])
 Continue()
 END

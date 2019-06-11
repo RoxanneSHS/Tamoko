@@ -1,15 +1,32 @@
 BACKUP ~EET_Swo/backup~
 AUTHOR ~Roxanne - https://baldursextendedworld.com/Tamoko/ or roxanne@baldursextendedworld.com~
 
-VERSION ~v0.3~
+VERSION ~v0.4~
+
+ALWAYS
+ ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+    INCLUDE ~EET_Swo\misc/liam_bgee_vars.tpa~
+    END ELSE BEGIN
+    INCLUDE ~EET/other/cpmvars/eet_cpmvars.tpa~
+    END
+END
+
 AUTO_TRA ~EET_Swo/Tra/%s~
 
 LANGUAGE ~English~ ~english~ ~EET_Swo/Tra/Setup-Swo.tra~
 
 BEGIN ~The Sword of Chaos~
-REQUIRE_PREDICATE GAME_IS ~ eet~ @1
+REQUIRE_PREDICATE GAME_IS ~bgee eet~ @1
 
 ADD_JOURNAL @1002 @1003 @1004 @1011 USING ~EET_Swo/Tra/Setup-Swo.tra~
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+COPY_EXISTING ~ar0125.bcs~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+        REPLACE_TEXTUALLY       ~GlobalLT("EndOfBG1","GLOBAL",2)~
+                                ~Global("EndOfBG1","GLOBAL",0)~
+  END
+END
 
 COPY_EXISTING ~BDKorme1.CRE~ ~override/Swome1.cre~
 WRITE_ASCII 0x280 ~Swome1~ #8
@@ -21,20 +38,25 @@ COPY_EXISTING ~BDKorme7.CRE~ ~override/Swome4.cre~
 WRITE_ASCII 0x280 ~Swome4~ #8
 
 COMPILE ~EET_Swo/D/TamokoJ.d~
-COMPILE ~EET_Swo/D/EETSwo.d~
-COMPILE ~EET_Swo/baf/SwoTamok.baf~
+COMPILE ~EET_Swo/D/EETSwo.d~ EVALUATE_BUFFER
+COMPILE ~EET_Swo/baf/SwoTamok.baf~  EVALUATE_BUFFER
 COMPILE ~EET_Swo/baf/SwoAmbS.baf~
 COMPILE ~EET_Swo/baf/SwoClean.baf~
 COMPILE ~EET_Swo/baf/SareSwo.baf~
 
-EXTEND_TOP ~bg0125.bcs~ ~EET_Swo/baf/bg0125.baf~
-EXTEND_TOP ~Sarevok_.bcs~ ~EET_Swo/baf/sareswo.baf~
-EXTEND_TOP ~bg0108.bcs~ ~EET_Swo/baf/BG0108.baf~
-EXTEND_TOP ~bg0200.bcs~ ~EET_Swo/baf/BG0200.baf~
-EXTEND_TOP ~bg0123.bcs~ ~EET_Swo/baf/BG0123saf.baf~
-EXTEND_TOP ~Safana.bcs~ ~EET_Swo/baf/SafanaUC.baf~
-EXTEND_TOP ~ar0601.bcs~ ~EET_Swo/baf/ar0601.baf~
+EXTEND_TOP ~%Undercity_TempleofBhaal_BCS%.bcs~ ~EET_Swo/baf/bg0125.baf~
+EXTEND_TOP ~%NBaldursGate_DucalPalace_L1_BCS%.bcs~ ~EET_Swo/baf/BG0108.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~%NBaldursGate_BCS%.bcs~ ~EET_Swo/baf/BG0200.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~%Undercity_BCS%.bcs~ ~EET_Swo/baf/BG0123saf.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~%SAFANA_BCS%.bcs~ ~EET_Swo/baf/SafanaUC.baf~ EVALUATE_BUFFER
 EXTEND_TOP ~bd0104.bcs~ ~EET_Swo/baf/bd0104.baf~
+
+ACTION_IF GAME_IS ~eet~ THEN BEGIN
+EXTEND_TOP ~ar0601.bcs~ ~EET_Swo/baf/ar0601.baf~
+EXTEND_TOP ~Sarevok_.bcs~ ~EET_Swo/baf/sareswo.baf~
+END ELSE BEGIN
+EXTEND_TOP ~Sarevok.bcs~ ~EET_Swo/baf/sareswo.baf~
+END
 
 COPY ~EET_Swo/Misc/Tamokos.bmp~ ~override~
 COPY ~EET_Swo/Misc/Tamokom.bmp~ ~override~
@@ -62,9 +84,24 @@ EXTEND_BOTTOM ~winski.bcs~ ~EET_Swo/baf/SwoClean.baf~
 COPY_EXISTING ~Delthy.CRE~ ~override~
 WRITE_ASCII 0x258 ~SwoClean~ #8
 
+ACTION_IF GAME_IS ~eet~ THEN BEGIN
 STRING_SET
 73926 @1006
 239808 @1013
+END ELSE BEGIN
+STRING_SET
+39808 @1013
+END
+
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+  COPY ~EET_Swo\misc/sw2h16.itm~ ~override~
+    SAY NAME1 @1014
+    SAY NAME2 @1015
+    SAY UNIDENTIFIED_DESC @1016
+    SAY DESC @1017
+  COPY ~EET_Swo\misc/CSW2H16.BAM~ ~override~
+  COPY ~EET_Swo\misc/ISW2H16.BAM~ ~override~
+END
 
 COPY ~EET_Swo/Misc/Sarevnd2.2da~ ~override~ REPLACE ~99999~ @1006
 

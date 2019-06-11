@@ -2,7 +2,7 @@ CHAIN
 IF WEIGHT #-2~Global("SWO_Delay","Global",2)~THEN Belt SwoQuest1
 ~<CHARNAME>, your return indicates that you and your friends were successful.~
 DO~SetGlobal("SWO_Delay","Global",3)~
-==Liia IF~InParty("Imoen2")~THEN~It is good to see you are well, Imoen. We have to talk, you and me - but first let us hear about Sarevok.~
+==Liia IF~InParty("%IMOEN_DV%")~THEN~It is good to see you are well, Imoen. We have to talk, you and me - but first let us hear about Sarevok.~
 END
 ++~Sarevok is dead. But on my return to here I was ambushed by remaining followers who are still loyal to his cause.~+ SwoQuest2
 ++~Sarevok is history but he was not alone. Someone named Korlasz is still around with what remains of Sarevok's followers.~+ SwoQuest2
@@ -15,13 +15,13 @@ IF~~THEN Belt SwoQuest2
 ==Liia~Our diviners say that her family possesses a large mausoleum right in the Undercity. She is down there, gathering the remaining forces of Sarevok's organisation.~
 ==Belt~<CHARNAME>, need I remind you that there will be no peace for you until you put an end to them? You were and still are their target. It is not just our interest but your very own to search for them.~DO~EscapeAreaDestroy(45)~
 ==Liia~You need to go once more to that Temple where your brother found his end.~DO~AddJournalEntry(@1004,QUEST)~
-==Liia IF~InParty("Imoen2")~THEN~You follow your task, <CHARNAME>, but Imoen will stay with me for the time. Nothing to worry, my dear girl. It is a promise I gave to Gorion and Winthrop long ago.~
-==Imoen2J IF~InParty("Imoen2")~THEN~You know Puffguts and ol' Gorion, lady?~
-==Liia IF~InParty("Imoen2")~THEN~Yes, of course. I gave them a promise to take care of your further education when the time has come. Obviously that time is now. Come, my girl, it is the moment to think about yourself for a while, <CHARNAME> will be able to manage without you eventually. It will not be forever, be sure.~DO~EscapeAreaDestroy(45)~
-==Imoen2J IF~InParty("Imoen2")~THEN~Ha, I doubt <PRO_HESHE> can, but hell...See you later, old buffleheads, I've got a career waitin'.~DO~LeaveParty() DestroySelf()~EXIT
+==Liia IF~InParty("%IMOEN_DV%")~THEN~You follow your task, <CHARNAME>, but Imoen will stay with me for the time. Nothing to worry, my dear girl. It is a promise I gave to Gorion and Winthrop long ago.~
+==%IMOEN_JOINED% IF~InParty("%IMOEN_DV%")~THEN~You know Puffguts and ol' Gorion, lady?~
+==Liia IF~InParty("%IMOEN_DV%")~THEN~Yes, of course. I gave them a promise to take care of your further education when the time has come. Obviously that time is now. Come, my girl, it is the moment to think about yourself for a while, <CHARNAME> will be able to manage without you eventually. It will not be forever, be sure.~DO~EscapeAreaDestroy(45)~
+==%IMOEN_JOINED% IF~InParty("%IMOEN_DV%")~THEN~Ha, I doubt <PRO_HESHE> can, but hell...See you later, old buffleheads, I've got a career waitin'.~DO~LeaveParty() DestroySelf()~EXIT
 
 CHAIN
-IF WEIGHT #-4~AreaCheck("BG0200") Global("TamokoJoin","GLOBAL",0)~THEN Tamoko AfterSar1
+IF WEIGHT #-4~AreaCheck("%NBaldursGate%") Global("TamokoJoin","GLOBAL",0)~THEN Tamoko AfterSar1
 ~I see it already, you don't have to tell me...He did not listen, am I right, you had to do what had to be done, tell me.~
 =~Sarevok is dead?~
 END
@@ -40,16 +40,16 @@ END
 ++~First you betray Sarevok, now you try to poison me, snake. Are you in league with that Korlasz? I will not let you fool me, draw steel!~DO~Enemy()~EXIT
 
 CHAIN
-IF~Global("Swo_Ambush","BG0200",1)~THEN BDKorme1 GetSword
+IF~Global("Swo_Ambush","%NBaldursGate%",1)~THEN BDKorme1 GetSword
 ~There they are, this one there has the sword!~
-DO~SetGlobal("Swo_Ambush","BG0200",2)~
+DO~SetGlobal("Swo_Ambush","%NBaldursGate%",2)~
 ==BDKorme2~Risk nothing, they killed Sarevok, we only need the weapon for Korlasz.~
 ==BDKorme1~Be quick before the guards get alarmed.~DO~ ClearAllActions() StartCutSceneMode() StartCutScene("SwoAmbS")~EXIT
 
 CHAIN
-IF WEIGHT #-5~Global("Safloot","bg0123",1)~THEN Safana ComeLoot
+IF WEIGHT #-5~Global("Safloot","%Undercity%",1)~THEN Safana ComeLoot
 ~Darlings, you did it, really, you killed that bastard Sarevok. Too bad I missed the battle.~
-DO~SetGlobal("Safloot","bg0123",2)~
+DO~SetGlobal("Safloot","%Undercity%",2)~
 =~Anyway, I'm just in time to help you carry all those valuables that must be stored inside. What you're waiting for?~
 END
 ++~I was only waiting for your encouragement, what else.~EXIT

@@ -2,10 +2,10 @@ IF
 Global("SWO_Delay","Global",3)
 !InParty("Safana")
 !Dead("Safana")
-Global("Safloot","bg0123",0)
+Global("Safloot","%Undercity%",0)
 THEN
 RESPONSE #100
-SetGlobal("Safloot","bg0123",1)
+SetGlobal("Safloot","%Undercity%",1)
 CreateCreature("Safana",[1753.1576],12)
 Continue()
 END

@@ -32,7 +32,7 @@ StartDialogueNoSet(Player1)
 END
 
 IF
-AreaCheck("BG0123")
+AreaCheck("%Undercity%")
 Range("Door0125",90)
 Global("Swo_TamokInt","Global",0)
 THEN
