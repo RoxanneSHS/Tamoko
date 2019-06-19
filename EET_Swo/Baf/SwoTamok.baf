@@ -20,6 +20,7 @@ SetGlobal("InParty","LOCALS",1)
 SetGlobal("TamokoJoin","GLOBAL",1)
 ChangeAIScript("DPlayer2",DEFAULT)
 MakeGlobal()
+AddXPObject(Myself,650000)
 END
 
 IF
