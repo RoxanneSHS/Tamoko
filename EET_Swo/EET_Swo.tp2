@@ -70,11 +70,11 @@ SAY DYING @1008
 
 ACTION_IF GAME_IS ~eet~ THEN BEGIN
 COPY_EXISTING ~Sarevo.cre~ ~override~
-WRITE_ASCII 0x248 ~Sarewok_~ #8
+WRITE_ASCII 0x248 ~Sarevok_~ #8
 BUT_ONLY
 END ELSE BEGIN
 COPY_EXISTING ~Sarevo.cre~ ~override~
-WRITE_ASCII 0x248 ~Sarewok~ #8
+WRITE_ASCII 0x248 ~Sarevok~ #8
 BUT_ONLY
 END
 

@@ -2,8 +2,10 @@ IF
 Global("SWO_Delay","Global",1)
 HPPercentGT(Myself,80)
 !HasItem("SW2H16",Myself)
+Global("Ihavesword","Locals",0)
 THEN
 RESPONSE #100
+SetGlobal("Ihavesword","Locals",1)
 GiveItemCreate("SW2H16",Myself,1,0,0)
 Continue()
 END
@@ -15,4 +17,5 @@ HasItem("SW2H16",Myself)
 THEN
 RESPONSE #100
 DropItem("SW2H16",[-1.-1])
+Continue()
 END
