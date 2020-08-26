@@ -50,6 +50,7 @@ EXTEND_TOP ~%NBaldursGate_BCS%.bcs~ ~EET_Swo/baf/BG0200.baf~ EVALUATE_BUFFER
 EXTEND_TOP ~%Undercity_BCS%.bcs~ ~EET_Swo/baf/BG0123saf.baf~ EVALUATE_BUFFER
 EXTEND_TOP ~%SAFANA_BCS%.bcs~ ~EET_Swo/baf/SafanaUC.baf~ EVALUATE_BUFFER
 EXTEND_TOP ~bd0104.bcs~ ~EET_Swo/baf/bd0104.baf~
+EXTEND_BOTTOM ~bd0120.bcs~ ~EET_Swo/baf/bd0120.baf~
 
 ACTION_IF GAME_IS ~eet~ THEN BEGIN
 EXTEND_TOP ~ar0601.bcs~ ~EET_Swo/baf/ar0601.baf~
