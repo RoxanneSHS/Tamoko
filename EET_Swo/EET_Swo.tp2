@@ -91,6 +91,12 @@ APPEND ~pdialog.2da~
 ~Tamoko TamokoP TamokoJ TamokoD *** *** *** ***~
 UNLESS ~Tamoko~
 
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+APPEND ~BDDialog.2da~
+~Tamoko           TamokoP           TamokoJ           TamokoD~
+UNLESS ~Tamoko~
+END
+
 APPEND ~interdia.2da~
 ~Tamoko TamokoJ *** ~
 UNLESS ~Tamoko~ 
