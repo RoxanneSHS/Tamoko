@@ -1,5 +1,13 @@
 IF
 Global("SWO_Delay","Global",2)
+Global("SarevokBehavior","GLOBAL",3)
+THEN
+RESPONSE #100
+SetGlobal("SarevokBehavior","GLOBAL",5)
+END
+
+IF
+Global("SWO_Delay","Global",2)
 Global("Swo_Ambush","%NBaldursGate%",0)
 THEN
 RESPONSE #100
