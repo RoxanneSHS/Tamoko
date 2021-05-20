@@ -32,10 +32,12 @@ END
 
 COPY_EXISTING ~BDKorme1.CRE~ ~override/Swome1.cre~
 WRITE_ASCII 0x280 ~Swome1~ #8
+WRITE_ASCII 0x34 ~Swome1~ #8
 COPY_EXISTING ~BDKordem.CRE~ ~override/Swome2.cre~
 WRITE_ASCII 0x280 ~Swome2~ #8
 COPY_EXISTING ~BDKorme2.CRE~ ~override/Swome3.cre~
 WRITE_ASCII 0x280 ~Swome3~ #8
+WRITE_ASCII 0x34 ~Swome3~ #8
 COPY_EXISTING ~BDKorme7.CRE~ ~override/Swome4.cre~
 WRITE_ASCII 0x280 ~Swome4~ #8
 
@@ -63,6 +65,8 @@ END
 
 COPY ~EET_Swo/Misc/Tamokos.bmp~ ~override~
 COPY ~EET_Swo/Misc/Tamokom.bmp~ ~override~
+COPY ~EET_Swo/Misc/swome1.bmp~ ~override~
+COPY ~EET_Swo/Misc/swome3.bmp~ ~override~
 COPY ~EET_Swo/Misc/sworot.spl~ ~override~
 
 COPY_EXISTING ~Tamoko.cre~ ~override~
