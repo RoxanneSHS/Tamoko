@@ -1,7 +1,7 @@
 BACKUP ~EET_Swo/backup~
 AUTHOR ~Roxanne - https://baldursextendedworld.com/Tamoko/ or roxanne@baldursextendedworld.com~
 
-VERSION ~v0.7~
+VERSION ~v0.8~
 
 ALWAYS
  ACTION_IF GAME_IS ~bgee~ THEN BEGIN
@@ -63,14 +63,14 @@ END ELSE BEGIN
 EXTEND_TOP ~Sarevok.bcs~ ~EET_Swo/baf/sareswo.baf~
 END
 
-COPY ~EET_Swo/Misc/Tamokos.bmp~ ~override~
 COPY ~EET_Swo/Misc/Tamokom.bmp~ ~override~
+COPY ~EET_Swo/Misc/Tamokom.bmp~ ~override/Tamoko.bmp~
 COPY ~EET_Swo/Misc/swome1.bmp~ ~override~
 COPY ~EET_Swo/Misc/swome3.bmp~ ~override~
 COPY ~EET_Swo/Misc/sworot.spl~ ~override~
 
 COPY_EXISTING ~Tamoko.cre~ ~override~
-WRITE_ASCII 0x34 ~Tamokos~ #8
+WRITE_ASCII 0x34 ~Tamokom~ #8
 WRITE_ASCII 0x3c ~Tamokom~ #8
 SAY BIO @1005
 SAY DYING @1008
