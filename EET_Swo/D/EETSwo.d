@@ -18,7 +18,7 @@ IF~~THEN Belt SwoQuest2
 ==Liia IF~InParty("%IMOEN_DV%")~THEN@10
 ==%IMOEN_JOINED% IF~InParty("%IMOEN_DV%")~THEN@11
 ==Liia IF~InParty("%IMOEN_DV%")~THEN@12DO~EscapeAreaDestroy(45)~
-==%IMOEN_JOINED% IF~InParty("%IMOEN_DV%")~THEN@13DO~LeaveParty() DestroySelf()~EXIT
+==%IMOEN_JOINED% IF~InParty("%IMOEN_DV%")~THEN@13DO~DestroyAllEquipment() Wait(1)LeaveParty() DestroySelf()~EXIT
 
 CHAIN
 IF WEIGHT #-4~AreaCheck("%NBaldursGate%") Global("TamokoJoin","GLOBAL",0)~THEN Tamoko AfterSar1
