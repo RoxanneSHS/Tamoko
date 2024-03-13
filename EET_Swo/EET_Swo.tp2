@@ -1,7 +1,7 @@
 BACKUP ~EET_Swo/backup~
 AUTHOR ~Roxanne - https://baldursextendedworld.com/Tamoko/ or roxanne@baldursextendedworld.com~
 
-VERSION ~v0.9~
+VERSION ~v1.11~
 
 ALWAYS
  ACTION_IF GAME_IS ~bgee~ THEN BEGIN
@@ -16,6 +16,7 @@ AUTO_TRA ~EET_Swo/Tra/%s~
 LANGUAGE ~English~ ~english~ ~EET_Swo/Tra/english/Setup-Swo.tra~
 LANGUAGE ~Deutsch~ ~german~ ~EET_Swo/Tra/german/Setup-Swo.tra~
 LANGUAGE ~Russian (by arcanecoast.ru)~ ~russian~ ~EET_Swo/Tra/russian/Setup-Swo.tra~
+LANGUAGE ~Simplified Chinese (by yoshimo0417)~ ~schinese~ ~EET_Swo/TRA/schinese/Setup-Swo.tra~
 
 BEGIN ~The Sword of Chaos~
 REQUIRE_PREDICATE GAME_IS ~bgee eet~ @1
